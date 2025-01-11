@@ -21,8 +21,7 @@ import Form from "./components/Form";
 import { CitiesProvider } from "./contexts/CitiesContext";
 import { AuthProvider } from "./contexts/FakeAuthContext";
 import ProtectedRoute from "./pages/ProtectedRoute";
-import SpinnerFullPage from "./components/SpinnerFullPage"
-
+import SpinnerFullPage from "./components/SpinnerFullPage";
 
 function App() {
   return (
@@ -33,27 +32,27 @@ function App() {
             <Suspense fallback={<SpinnerFullPage />}>
               <Routes>
                 <Route index element={<HomePage />} />
-                <Route path="product" element={<Product />} />
+                <Route path='product' element={<Product />} />
 
                 <Route
-                  path="app"
+                  path='app'
                   element={
                     <ProtectedRoute>
                       <AppLayout />
                     </ProtectedRoute>
                   }
                 >
-                  <Route index element={<Navigate to="cities" />} />
-                  <Route path="cities" element={<CityList />} />
-                  <Route path="cities/:id" element={<City />} />
-                  <Route path="countries" element={<CountryList />} />
-                  <Route path="form" element={<Form />} />
+                  <Route index element={<Navigate to='cities' />} />
+                  <Route path='cities' element={<CityList />} />
+                  <Route path='cities/:id' element={<City />} />
+                  <Route path='countries' element={<CountryList />} />
+                  <Route path='form' element={<Form />} />
                 </Route>
 
-                <Route path="pricing" element={<Pricing />} />
-                <Route path="*" element={<PageNotFound />} />
+                <Route path='pricing' element={<Pricing />} />
+                <Route path='*' element={<PageNotFound />} />
                 {/* Login Page */}
-                <Route path="login" element={<Login />} />
+                <Route path='login' element={<Login />} />
               </Routes>
             </Suspense>
           </BrowserRouter>
