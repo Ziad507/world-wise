@@ -7,7 +7,7 @@ import {
 } from "react";
 
 const CitiesContext = createContext();
-const BASE_URL = "https://worldwise-psi-bay.vercel.app/app/cities/cities.json";
+const BASE_URL = "https://world-wise-psi-bay.vercel.app/cities.json";
 
 const initialState = {
   cities: [],
